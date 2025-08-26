@@ -6,7 +6,7 @@
     <title>Minha Agenda | Agenda</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="pagina-agenda">
+<body>
     <header>
         <nav>
             <a href="agenda.html" class="ativo" aria-current="page">Agenda</a>
@@ -20,12 +20,41 @@
     </header>
 
     <main>
-        <section class="agenda-container">
-            <h1>Agenda de Agendamentos</h1>
-            <p>Em breve, a agenda completa para agendamentos de clientes.</p>
-        </section>
+        <div class="agenda-container">
+            <div class="header-agenda">
+                <div class="nav-agenda">
+                    <span id="prev-week" class="nav-btn">&lt;</span>
+                    <span class="week-title">Semana</span>
+                    <span id="next-week" class="nav-btn">&gt;</span>
+                </div>
+                <div class="days-of-week" id="days-of-week">
+                    </div>
+            </div>
+
+            <div class="time-slots-container" id="time-slots-container">
+                </div>
+        </div>
     </main>
-    
+
+    <div id="agendamento-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Novo Agendamento</h2>
+            <form id="agendamento-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="servico">Serviço:</label>
+                <input type="text" id="servico" name="servico" required>
+
+                <label for="horario">Horário:</label>
+                <input type="text" id="horario" name="horario" readonly>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </div>
+
     <script src="agenda.js"></script>
 </body>
 </html>
