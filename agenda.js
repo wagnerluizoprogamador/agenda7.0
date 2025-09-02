@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateTimeSlots = () => {
         // Limpa o conteúdo atual
         timeSlotsContainer.innerHTML = '';
-        
+
         // Define os horários de 09:00h às 18:00h
         for (let i = 9; i <= 18; i++) {
             const time = `${i < 10 ? '0' : ''}${i}:00`;
-            
+
             // Adiciona a label do horário
             const timeLabel = document.createElement('div');
             timeLabel.classList.add('time-label');
